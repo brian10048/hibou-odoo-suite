@@ -21,7 +21,7 @@ USA::Florida Payroll Rules.
         'data/base.xml',
         'data/rates.xml',
         'data/rules.xml',
-        'data/final.xml',
+        #'data/final.xml',
     ],
     'installable': True
 }
