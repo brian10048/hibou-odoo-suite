@@ -47,50 +47,6 @@
                         <group name="state_fl_florida" string="FL Florida" attrs="{'invisible':[('state_id', '!=', %(base.state_us_10)s)]}">
                             <p colspan="2"><h3>No additional fields.</h3></p>
                         </group>
-                        <group name="state_ga_georgia" string="GA Georgia" attrs="{'invisible':[('state_id', '!=', %(base.state_us_11)s)]}">
-                            <p colspan="2"><h3>Form G-4 - State Income Tax</h3></p>
-                            <field name="ga_g4_sit_filing_status" string="Marital Status 3."/>
-                            <field name="ga_g4_sit_dependent_allowances" string="Dependent Allowances 4."/>
-                            <field name="ga_g4_sit_additional_allowances" string="Additional Allowances 5."/>
-                            <field name="state_income_tax_additional_withholding" string="Additional Withholding 6."/>
-                            <field name="state_income_tax_exempt" string="Exempt 8."/>
-                        </group>
-                        <group name="state_ms_mississippi" string="MS Mississippi" attrs="{'invisible':[('state_id', '!=', %(base.state_us_37)s)]}">
-                            <p colspan="2"><h3>Form 89-350 - State Income Tax</h3></p>
-                            <field name="ms_89_350_sit_filing_status" string="Marital Status 1. 2. 3. 8."/>
-                            <field name="ms_89_350_sit_exemption_value" string="Exemptions (Total) 6."/>
-                            <field name="state_income_tax_additional_withholding" string="Additional Withholding 7."/>
-                        </group>
-                        <group name="state_mt_montana" string="MT Montana" attrs="{'invisible':[('state_id', '!=', %(base.state_us_21)s)]}">
-                            <p colspan="2"><h3>Form MT-4 - State Income Tax</h3></p>
-                            <field name="mt_mw4_sit_exempt" string="Exempt"/>
-                            <field name="mt_mw4_sit_exemptions" string="Exemptions"/>
-                            <field name="state_income_tax_additional_withholding" string="Additional Withholding (Box H)"/>
-                        </group>
-                        <group name="state_oh_ohio" string="OH Ohio" attrs="{'invisible':[('state_id', '!=', %(base.state_us_30)s)]}">
-                            <p colspan="2"><h3>Form IT-4 - State Income Tax</h3></p>
-                            <field name="state_income_tax_exempt"/>
-                            <field name="oh_it4_sit_exemptions" string="Exemptions"/>
-                            <field name="state_income_tax_additional_withholding" string="Additional Withholding (Line 5)"/>
-                        </group>
-                        <group name="state_pa_pennsylvania" string="PA Pennsylvania" attrs="{'invisible':[('state_id', '!=', %(base.state_us_39)s)]}">
-                            <field name="state_income_tax_exempt"/>
-                            <field name="state_income_tax_additional_withholding"/>
-                        </group>
-                        <group name="state_tx_texas" string="TX Texas" attrs="{'invisible':[('state_id', '!=', %(base.state_us_44)s)]}">
-                            <p colspan="2"><h3>No additional fields.</h3></p>
-                        </group>
-                        <group name="state_va_virginia" string="VA Virginia" attrs="{'invisible':[('state_id', '!=', %(base.state_us_47)s)]}">
-                            <p colspan="2"><h3>Form VA-4/VA-4P - State Income Tax</h3></p>
-                            <field name="va_va4_sit_exemptions" string="Personal Exemptions (Line 1(a))"/>
-                            <field name="va_va4_sit_other_exemptions" string="Age &amp; Blindness Exemptions (Line 1(b))"/>
-                            <field name="state_income_tax_additional_withholding" string="Additional Withholding (Line 2)"/>
-                            <field name="state_income_tax_exempt" string="Exempt (Line 3 or 4)"/>
-                        </group>
-                        <group name="state_wa_washington" string="WA Washington" attrs="{'invisible':[('state_id', '!=', %(base.state_us_48)s)]}">
-                            <p colspan="2"><h3>No additional fields.</h3></p>
-                            <p colspan="2">Ensure that your Employee and Employer workers' comp code fields are filled in for WA LNI withholding.</p>
-                        </group>
                     </group>
                 </sheet>
             </form>

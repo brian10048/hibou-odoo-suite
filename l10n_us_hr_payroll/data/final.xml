@@ -18,38 +18,6 @@
 
             ref('hr_payroll_rule_er_us_fl_suta'),
 
-            ref('hr_payroll_rule_er_us_ga_suta'),
-            ref('hr_payroll_rule_ee_us_ga_sit'),
-
-            ref('hr_payroll_rule_er_us_ms_suta'),
-            ref('hr_payroll_rule_ee_us_ms_sit'),
-
-            ref('hr_payroll_rule_er_us_mt_suta'),
-            ref('hr_payroll_rule_er_us_mt_suta_aft'),
-            ref('hr_payroll_rule_ee_us_mt_sit'),
-
-            ref('hr_payroll_rule_er_us_oh_suta'),
-            ref('hr_payroll_rule_ee_us_oh_sit'),
-
-            ref('hr_payroll_rule_er_us_pa_suta'),
-            ref('hr_payroll_rule_ee_us_pa_suta'),
-            ref('hr_payroll_rule_ee_us_pa_sit'),
-
-            ref('hr_payroll_rule_er_us_tx_suta'),
-            ref('hr_payroll_rule_er_us_tx_suta_oa'),
-            ref('hr_payroll_rule_er_us_tx_suta_etia'),
-
-            ref('hr_payroll_rule_er_us_va_suta'),
-            ref('hr_payroll_rule_ee_us_va_sit'),
-
-            ref('hr_payroll_rule_er_us_wa_suta'),
-            ref('hr_payroll_rule_er_us_wa_fml'),
-            ref('hr_payroll_rule_ee_us_wa_fml'),
-            ref('hr_payroll_rule_er_us_wa_lni'),
-            ref('hr_payroll_rule_ee_us_wa_lni'),
-
-            ref('hr_salary_rule_commission'),
-            ref('hr_salary_rule_gamification'),
           ])]" name="rule_ids"/>
         <field name="company_id" ref="base.main_company"/>
         <field name="parent_id" ref="hr_payroll.structure_base"/>

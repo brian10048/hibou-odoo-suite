@@ -14,13 +14,13 @@ from .federal.fed_941 import ee_us_941_fica_ss, \
 from .state.general import general_state_unemployment, \
                            general_state_income_withholding, \
                            is_us_state
-from .state.ga_georgia import ga_georgia_state_income_withholding
-from .state.ms_mississippi import ms_mississippi_state_income_withholding
-from .state.mt_montana import mt_montana_state_income_withholding
-from .state.oh_ohio import oh_ohio_state_income_withholding
-from .state.va_virginia import va_virginia_state_income_withholding
-from .state.wa_washington import wa_washington_fml_er, \
-                                 wa_washington_fml_ee
+# from .state.ga_georgia import ga_georgia_state_income_withholding
+# from .state.ms_mississippi import ms_mississippi_state_income_withholding
+# from .state.mt_montana import mt_montana_state_income_withholding
+# from .state.oh_ohio import oh_ohio_state_income_withholding
+# from .state.va_virginia import va_virginia_state_income_withholding
+# from .state.wa_washington import wa_washington_fml_er, \
+#                                  wa_washington_fml_ee
 
 
 class HRPayslip(models.Model):
@@ -53,13 +53,13 @@ class HRPayslip(models.Model):
             'general_state_unemployment': general_state_unemployment,
             'general_state_income_withholding': general_state_income_withholding,
             'is_us_state': is_us_state,
-            'ga_georgia_state_income_withholding': ga_georgia_state_income_withholding,
-            'ms_mississippi_state_income_withholding': ms_mississippi_state_income_withholding,
-            'mt_montana_state_income_withholding': mt_montana_state_income_withholding,
-            'oh_ohio_state_income_withholding': oh_ohio_state_income_withholding,
-            'va_virginia_state_income_withholding': va_virginia_state_income_withholding,
-            'wa_washington_fml_er': wa_washington_fml_er,
-            'wa_washington_fml_ee': wa_washington_fml_ee,
+            # 'ga_georgia_state_income_withholding': ga_georgia_state_income_withholding,
+            # 'ms_mississippi_state_income_withholding': ms_mississippi_state_income_withholding,
+            # 'mt_montana_state_income_withholding': mt_montana_state_income_withholding,
+            # 'oh_ohio_state_income_withholding': oh_ohio_state_income_withholding,
+            # 'va_virginia_state_income_withholding': va_virginia_state_income_withholding,
+            # 'wa_washington_fml_er': wa_washington_fml_er,
+            # 'wa_washington_fml_ee': wa_washington_fml_ee,
         }
 
     def get_year(self):

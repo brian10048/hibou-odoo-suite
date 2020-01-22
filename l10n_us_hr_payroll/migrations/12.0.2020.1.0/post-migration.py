@@ -23,7 +23,7 @@ def migrate(cr, installed_version):
         return
 
     env = Environment(cr, SUPERUSER_ID, {})
-    new_structure = env.ref('l10n_us_hr_payroll.structure_type_employee')
+    # new_structure = env.ref('l10n_us_hr_payroll.structure_type_employee')
 
     def get_state(code, cache={}):
         country_key = 'US_COUNTRY'
@@ -42,9 +42,11 @@ def migrate(cr, installed_version):
     # We will assume all contracts without a struct (because we deleted it), or with one like US_xx_EMP, need config
     contracts = env['hr.contract'].search([
         ('employee_id', '!=', False),
-        '|',
-        ('struct_id', '=', False),
-        ('struct_id.code', '=like', 'US_%'),
+        # Assume ALL ACTIVE contracts because mcmpest uses its own structures and active is only need to be configed
+        ('active', '=', True)
+        # '|',
+        # ('struct_id', '=', False),
+        # ('struct_id.code', '=like', 'US_%'),
     ])
     _logger.warn('Migrating Contracts: ' + str(contracts))
     for contract in contracts:
@@ -55,8 +57,8 @@ def migrate(cr, installed_version):
         # Could we somehow detect the state off of the current/orphaned salary structure?
         state_code = False
         old_struct_code = contract.struct_id.code
-        if old_struct_code:
-            state_code = old_struct_code.split('_')[1]
+        # if old_struct_code:
+        state_code = 'FL'  # beacuse we are only in FL-iduh
         temp_values = temp_field_values(cr, 'hr_contract', contract.id, fields_to_move)
         # Resolve mapping to the new field names.
         values = {FIELDS_CONTRACT_TO_US_PAYROLL_FORMS_2020[k]: v for k, v in temp_values.items()}
@@ -67,7 +69,7 @@ def migrate(cr, installed_version):
         })
         us_payroll_config = env['hr.contract.us_payroll_config'].create(values)
         contract.write({
-            'struct_id': new_structure.id,
+            # 'struct_id': new_structure.id,  # These are my structures not yours to change
             'us_payroll_config_id': us_payroll_config.id,
         })
 
